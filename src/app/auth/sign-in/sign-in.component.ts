@@ -11,7 +11,7 @@ import { Location } from '@angular/common'
 })
 export class SignInComponent implements OnInit {
 
-  private loggedIn: boolean;
+  loggedIn: boolean;
 
   constructor(private authService: AuthService,
               private router: Router,
