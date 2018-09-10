@@ -17,9 +17,11 @@
             <li routerLinkActive="active" (click)="myLibrary()">
                 <span class="fas mr-2 fa-book-reader"></span> My Library
             </li>
-            <li>
-                <a (click)="login()" *ngIf="!loginInfo"><span class="fas mr-2 fa-sign-in-alt"></span> Login</a>
-                <a (click)="logout()" *ngIf="loginInfo"><span class="fas mr-2 fa-sign-in-alt reverse"></span> Logout</a>
+            <li (click)="login()" *ngIf="!loginInfo">
+                    <span class="fas mr-2 fa-sign-in-alt"></span> Login               
+            </li>
+            <li (click)="logout()" *ngIf="loginInfo">
+                <span class="fas mr-2 fa-sign-in-alt reverse"></span> Logout
             </li>
         </ul>
     </div>

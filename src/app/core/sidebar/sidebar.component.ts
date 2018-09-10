@@ -41,4 +41,11 @@ export class SidebarComponent implements OnInit {
     this.authService.signOut();
   }
 
+  login(){
+    this.router.navigate(['dashboard/login'], {
+      preserveFragment: true,
+      queryParamsHandling: 'preserve'    
+    })
+  }
+
 }
