@@ -1,0 +1,13 @@
+<div class="row pt-5 px-4">
+  <div class="col-1 pr-0"> 
+  <p class="text-secondary d-inline-block">Filter by</p>
+  </div>
+  <div class="col-4 form-group">
+      <select class="form-control default_input form-control-sm" 
+              (change)="filterChange($event)">
+        <option *ngFor="let filter of filterBy" 
+                [ngValue]="filter.id" 
+                [selected]="filter.id == this.selectedFilter.id">{{filter.title}}</option>
+      </select>
+  </div>
+</div>

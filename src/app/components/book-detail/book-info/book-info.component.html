@@ -1,0 +1,36 @@
+<div  class="mb-3">
+    <h3>{{volumeInfo?.title}}</h3>
+    <h5 class="text-secondary">{{volumeInfo?.subtitle}}</h5>
+    <div>
+      <span class="font-italic">By: </span> 
+      <p class="d-inline-block" *ngFor="let author of volumeInfo?.authors">{{author}}</p>
+    </div>
+    <div class="f_12 mb-3">
+        <!-- <button type="button" 
+              class="btn default_btn mr-3" (click)="viewSampleClick()">View Sample</button> -->
+        <div class="d-inline-block dropdown" [appDropdown]="dropdownRef" [activeButton]="actButton">
+            <button type="button" 
+                    class="btn default_btn" #actButton>Add to Mylibary<span class="fas fa-caret-down ml-1"></span></button>
+            <div class="dropdown-menu" #dropdownRef>
+              <a class="dropdown-item" 
+                *ngFor="let bookshelve of bookshelveIds"
+                (click)="addToMyLibraryClick(bookshelve.id)">{{bookshelve.title}}</a>
+            </div>
+        </div>
+       </div>
+    <div class="f_14" [innerHtml]="volumeInfo?.description"></div>
+  </div>
+  <div class="mb-3">
+    <div class="f_14">
+      <p class="text-secondary mb-2">Category: </p> 
+      <p class="mb-1" *ngFor="let category of volumeInfo?.categories">{{category}}</p>
+    </div>
+  </div>
+  <div class="f_14 mb-3">
+      <span class="text-secondary">User review:</span>
+      <div appStarRating="{{volumeInfo?.averageRating}}" class="d-inline-block ml-2"></div>
+  </div>
+  <div class="f_14 mb-5">
+    <p><span class="text-secondary">Publisher: </span>{{volumeInfo?.publisher}}</p>
+    <p><span class="text-secondary">Page Count: </span>{{volumeInfo?.pageCount}}</p>
+</div>

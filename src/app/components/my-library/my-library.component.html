@@ -1,0 +1,16 @@
+<div class="row pt-5 px-4">
+  <div class="col-12">
+      <h4 class="text-secondary">My Library</h4>
+  </div>
+  <div class="col-12 mx-auto my-5">
+    <div class="position-relative bookshelve_wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="col-12">
+    <ul class="list-group bookshelves_list pb-5">
+      <li class="list item f_18 py-2" 
+          *ngFor="let bookshelve of bookshelves" (click)="onBookshelveClick(bookshelve.id)">{{bookshelve.title}} ({{bookshelve.volumeCount}})</li>
+    </ul>
+  </div>
+</div>

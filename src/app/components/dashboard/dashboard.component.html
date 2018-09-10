@@ -1,0 +1,16 @@
+<app-filter *ngIf="!noSearch"></app-filter>
+<div class="row pt-4 px-4" *ngIf="!noSearch">
+    <div class="col-3 mb-3" *ngFor="let book of booksArray; let i = index;">
+      <app-book-card [card]="book" [cardIndex]="i"></app-book-card>  
+    </div>
+</div>
+<div class="row pt-4 px-4 align-items-center justify-content-center no_search_wrapper" *ngIf="noSearch">
+    <div class="col-12">
+        <div class="pl-3 text-secondary text-center" *ngIf="noSearch">
+            <div>
+              <img src="/assets/search-book.png" alt="">
+            </div>
+            Let's search for you're looking for...
+          </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.fa-star{
+    color: #ffd400;
+    margin: 0 2px;
+}
+.dropdown-item:hover{
+    color: white !important;
+    background: #484848;
+    transition: 0.3s all;
+}

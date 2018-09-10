@@ -1,0 +1,45 @@
+.login_wrapper{
+    height: 500px;
+    border: 1px solid rgba(128, 128, 128, 0.23921568627450981);
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.37);
+    padding: 15px;
+}
+.btn_wrapper{
+    text-align: center;
+    margin-top: 150px;
+}
+.btn_wrapper button{
+    position: relative;
+    background: #d64a2e;
+    border: 0;
+    color: white;
+    padding: 10px 30px 10px 65px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn_wrapper button span{
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    left: 26px;
+    top: 9px;
+}
+.sub_border{
+    position: relative;
+    display: inline-block;
+}
+.sub_border::after{
+    content: ' ';
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    background: #d64a2e;
+    left: 0;
+    bottom: -14px;
+}
+
+.success span{
+    font-size: 120px;
+    color: #28a745;
+}

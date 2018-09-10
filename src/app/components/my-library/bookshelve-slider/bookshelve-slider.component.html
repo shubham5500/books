@@ -1,0 +1,33 @@
+<swiper [config]="config" 
+        #swiperSlider 
+        *ngIf="volumes">
+  <div *ngFor="let volume of volumes;let i = index" >
+    <div class="volume_slide" >
+      <span class="fas fa-times-circle fa_btn clear" 
+            (click)="removeVolumeFromBookshelve(volume.id, i)"></span>
+      <span class="fas fa-info-circle fa_btn info" 
+            (click)="gotoVolumeDetail(volume.id)"></span>
+      <img  [src]="volume?.volumeInfo?.imageLinks.thumbnail" 
+            height="100%" 
+            width="100%">
+    </div>
+  </div>
+</swiper>
+<div class="no_book" 
+    *ngIf="!volumes">
+  No Book Found
+</div>
+<div class="arrow_wrapper prev" 
+     (click)="slide('prev')">
+  <div class="position-relative">
+    <img class="c_p" 
+         src="/assets/right-arrow.png">
+  </div>
+</div>
+<div class="arrow_wrapper next" 
+     (click)="slide('next')">
+  <div class="position-relative ">
+    <img class="c_p" 
+         src="/assets/right-arrow.png">
+  </div>
+</div>

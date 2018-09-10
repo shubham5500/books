@@ -1,0 +1,36 @@
+.cssload-speeding-wheel {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto;
+    border: 3px solid #484848;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    animation: cssload-spin .88s infinite linear;
+}
+.cssload-container {
+    width: 100%;
+    height: 36px;
+    text-align: center;
+}
+@keyframes cssload-spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+#page-loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 9999999;
+    background: #fff;
+    transition: .3s all ease;
+}

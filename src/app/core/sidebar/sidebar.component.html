@@ -1,0 +1,26 @@
+<div class="row sidebar">
+    <div class="col-12 px-0">
+        <ul class="list-group">
+            <li class="mt-5 text-center">
+                <img class="rounded-circle" 
+                     [src]="user?.photoUrl" 
+                     onError="this.src='/assets/avatar.png'" 
+                     height="64px" 
+                     width="64px" >
+            </li>
+            <li class="text-center mt-3">{{user?.name}}</li>
+        </ul>
+        <ul class="list-group pl-4 utilities_list mt-4">
+            <li routerLinkActive="active" (click)="onSideLinkClick('/dashboard')">
+                <span class="fas mr-2 fa-home"></span> Home
+            </li>
+            <li routerLinkActive="active" (click)="myLibrary()">
+                <span class="fas mr-2 fa-book-reader"></span> My Library
+            </li>
+            <li>
+                <a (click)="login()" *ngIf="!loginInfo"><span class="fas mr-2 fa-sign-in-alt"></span> Login</a>
+                <a (click)="logout()" *ngIf="loginInfo"><span class="fas mr-2 fa-sign-in-alt reverse"></span> Logout</a>
+            </li>
+        </ul>
+    </div>
+</div>

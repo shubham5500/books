@@ -1,0 +1,7 @@
+<app-filter></app-filter>
+<div class="row pt-4 px-4">
+    <div class="col-3 mb-3" *ngFor="let book of booksArray; let i = index;">
+      <app-book-card [card]="book" [cardIndex]="i"></app-book-card>  
+    </div>
+    <!-- <p *ngIf="!booksArray">Sorry search doesn't match...</p> -->
+</div>

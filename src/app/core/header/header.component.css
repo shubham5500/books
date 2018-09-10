@@ -1,0 +1,30 @@
+.bd-navbar {
+    min-height: 4rem;
+    background-color: #fff;
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    position: sticky;
+    top: 0;
+    z-index: 1071;
+}
+.bd-navbar a{
+    color: #404040;
+}
+.bd-navbar a:hover{
+    color: rgba(128, 128, 128, 0.747);
+    transition: 0.5s all;
+}
+.search_box{
+    width: 250px;
+}
+.search_wrapper button{
+    position: absolute;
+    top: 6px;
+    right: 4px;
+    background: transparent;
+    border: 0;
+    color: grey;
+    cursor: pointer;
+}
+.search_wrapper button:focus{
+    outline: none;
+}

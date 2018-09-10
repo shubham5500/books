@@ -1,0 +1,60 @@
+.arrow_wrapper{
+    position: absolute;
+    margin-top: -16px;
+    top: 15px;
+    height: 100%;
+}
+.arrow_wrapper.prev{
+    left: 0;
+}
+.arrow_wrapper.next{
+    right: 0;
+}
+.arrow_wrapper .position-relative{
+    height: 100%;
+}
+.arrow_wrapper .position-relative img{
+    position: absolute; 
+    margin-top: -16px;
+    top: 50%;
+}
+.arrow_wrapper.prev .position-relative img{
+    left: 6px;
+    transform: rotate(180deg);
+}
+.arrow_wrapper.next .position-relative img{
+    right: 6px;
+}
+.volume_slide{
+    height: 250px;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #e6e6e6;
+    position: relative;
+    border-radius: 2px;
+}
+.no_book{
+    height: 250px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa_btn{
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: black;
+    box-shadow: 0px 0px 10px white;
+}
+.clear{
+    right: 5px;
+    top: 6px;
+}
+.info{
+    right: 30px;
+    top: 6px;
+}

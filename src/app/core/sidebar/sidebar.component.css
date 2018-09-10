@@ -1,0 +1,31 @@
+.sidebar{
+    position: sticky;
+    top: 4rem;
+    z-index: 10000;
+    height: calc(100vh - 4rem);
+    border-right: 1px solid rgba(128, 128, 128, 0.23921568627450981);
+}
+.utilities_list{
+    overflow-x: hidden;
+}
+.utilities_list li{
+    padding: 5px 0 5px 10px;
+    margin-right: -5px;
+    font-size: 14px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #d6d6d6;
+}
+.utilities_list li:hover{
+    border-radius: 4px;
+    background: #484848;
+    color: white;
+    border: 1px solid rgba(80, 80, 80, 0.82);
+    box-shadow: 0px 1px 2px #484848;
+    transition: all 0.3s;
+}
+.reverse{
+    transform: rotate(180deg);
+}
