@@ -5,9 +5,10 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
   <meta charset="utf-8">
-  <title>BooksApp</title>
+  <title>Bookishly</title>
   <base href="/">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <!-- Mobile Responsive is coming in the next update also few more precise search options :p -->
   <meta name="viewport" content="width=1360">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -21,7 +22,7 @@
 
       function initialize() {
         var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
-        viewer.load('ISBN:0738531367');
+        viewer.load('ISBN:<BOOK_ISBN_NUMBER>');
       }
 
       google.books.setOnLoadCallback(initialize);
