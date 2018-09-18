@@ -4,6 +4,7 @@ import { BookInfoComponent } from "./book-info/book-info.component";
 import { BookImageComponent } from "./book-image/book-image.component";
 import { SharedModule } from "../../shared/shared.module";
 import { StarRatingDirective } from "../../directives/star-rating.directive";
+import { BookDetailRoutingModule } from "./book-detail-routing.module";
 @NgModule({
     declarations: [
         BookDetailComponent,
@@ -12,7 +13,8 @@ import { StarRatingDirective } from "../../directives/star-rating.directive";
         StarRatingDirective
     ],
     imports: [
-        SharedModule
+        SharedModule,
+        BookDetailRoutingModule
     ]
 })
 

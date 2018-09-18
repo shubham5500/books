@@ -1,15 +1,10 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { SignInComponent } from "../auth/sign-in/sign-in.component";
 import { SearchComponent } from "../components/search/search.component";
 import { PublicComponent } from "../components/public.component";
-import { DashboardComponent } from "../components/dashboard/dashboard.component";
-import { BookDetailComponent } from "../components/book-detail/book-detail.component";
 import { EmbededViewComponent } from "../components/embeded-view/embeded-view.component";
-import { MyLibraryComponent } from "../components/my-library/my-library.component";
-import { BookshelveSliderStartComponent } from "../components/my-library/bookshelve-slider-start/bookshelve-slider-start.component";
-import { BookshelveSliderComponent } from "../components/my-library/bookshelve-slider/bookshelve-slider.component";
 
 const appRoutes: Routes = [
     {
@@ -27,8 +22,8 @@ const appRoutes: Routes = [
         children: [
             {
                 path: '',
-                component: DashboardComponent,
-                pathMatch: 'full'
+                loadChildren: '../components/dashboard/dashboard.module#DashboardModule'
+                 //This above is lazy loading route, this module will be loaded whenever it is neccessary to be loaded and that is called lazy loading
             },
             {
                 path: 'login',
@@ -36,22 +31,12 @@ const appRoutes: Routes = [
             },
             {
                 path: 'my-library',
-                component: MyLibraryComponent,
-                children: [
-                    {
-                        path: '',
-                        component: BookshelveSliderStartComponent,
-                        pathMatch: 'full'
-                    },
-                    {
-                        path: ':id',
-                        component: BookshelveSliderComponent
-                    }
-                ]
+                loadChildren: '../components/my-library/my-library.module#MyLibraryModule',
+                //This above is lazy loading route, this module will be loaded whenever it is neccessary to be loaded and that is called lazy loading
             },
             {
                 path: ':id',
-                component: BookDetailComponent
+                loadChildren: '../components/book-detail/book-detail.module#BookDetailModule'
             },
             {
                 path: ':id/view-sample',
@@ -63,11 +48,13 @@ const appRoutes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, {
+            preloadingStrategy: PreloadAllModules
+            // This above tells "preloadingStrategy: PreloadAllModules" the browser to preload all the lazy loaded routes while the user is browsing some other page it is for optimizing and boosting the performance of the app..
+        })
     ],
     exports: [RouterModule]
 })
 
 export class AppRoutingModule{
-
 }

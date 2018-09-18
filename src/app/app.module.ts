@@ -14,11 +14,13 @@ import { SharedService } from './shared/shared.service';
 import { BookDetailService } from './components/book-detail/book-detail.service';
 import { AuthenticationService } from './auth/auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EmbededViewComponent } from './components/embeded-view/embeded-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoaderComponent
+    LoaderComponent,
+    EmbededViewComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatSnackBarModule
   ],
-  providers: [SearchService, SharedService, BookDetailService, AuthenticationService],
+  providers: [SearchService,
+              SharedService,
+              BookDetailService, 
+              AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

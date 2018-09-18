@@ -47,5 +47,5 @@ export class SidebarComponent implements OnInit {
       queryParamsHandling: 'preserve'    
     })
   }
-
+  
 }

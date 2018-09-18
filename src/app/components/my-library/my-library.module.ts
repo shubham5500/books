@@ -7,10 +7,12 @@ import { BookshelveSliderComponent } from './bookshelve-slider/bookshelve-slider
 import { BookshelveSliderStartComponent } from './bookshelve-slider-start/bookshelve-slider-start.component';
 import { RouterModule } from "@angular/router";
 import { SharedModule } from "../../shared/shared.module";
+import { MyLibraryRoutingModule } from "./my-library-routing.module";
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     direction: 'horizontal',
-    slidesPerView: 5
+    slidesPerView: 5,
+    observer: true
 };
 
 @NgModule({
@@ -22,7 +24,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     imports: [
         SwiperModule,
         RouterModule,
-        SharedModule
+        SharedModule,
+        MyLibraryRoutingModule
     ],
     providers: [
         {
